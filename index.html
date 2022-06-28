@@ -9,20 +9,22 @@
   <body>
     <h1>Hello, world!</h1>
 
-<a href="javascript:void(0)" onclick="showHide('staff_id')">press</a>
+<a href="javascript:void(0)" onclick="showHide('staff_id')"><div id="text_staff">Показать сотруднков</div> </a>
 <div id="staff_id" style="display:none">Example text</div>
 <script>
+
    function showHide(staff_id){
     if(document.getElementById(staff_id)){
       let obj = document.getElementById(staff_id)
       if(obj.style.display !="block"){
         obj.style.display ="block"
+        document.getElementById('text_staff').innerHTML = 'Скрыть сотрудников'
       }
       else{
         obj.style.display ="none"
+        document.getElementById('text_staff').innerHTML = 'Показать сотрудников'
       }
     }
-
    }
 </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
