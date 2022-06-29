@@ -51,8 +51,8 @@ const people = [
 //    return acc
 //},0)
 //console.log(allBudget)
-const allBudget =people.filter(person=>person.budget>499).reduce((acc,person)=>{
-    acc+=person.budget
-    return acc
-}, 0)
-console.log(allBudget)
+//const allBudget =people.filter(person=>person.budget>499).reduce((acc,person)=>{
+ //   acc+=person.budget
+ //   return acc
+//}, 0)
+//console.log(allBudget)
