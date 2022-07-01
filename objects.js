@@ -88,5 +88,55 @@ const logger={
 //bound()
 //logger.key.call(person)
 //logger.keyAndValue.call(person)
-logger.withParams.call(person,true,true,true)
-logger.withParams.apply(person,[true,true,true])
+//logger.withParams.call(person,true,true,true)
+//logger.withParams.apply(person,[true,true,true])
+ /*var cat ={name:"Athena"};
+ function swap(feline){
+feline.name="Wild";
+feline={name:"Tabby"};
+ }
+ swap(cat)
+ console.log(cat.name)*/
+ /*let animals =["jaguar","eagle"]
+ animals.reverse()
+ console.log(animals.pop())*/
+ /*class RainForest{
+    static minimumRainFall = 60;
+ }
+ let congo = new RainForest();
+ RainForest.minimumRainFall=80;
+console.log(congo.minimumRainFall)*/
+/*let RainForest =10
+let animals =0
+while(RainForest<13||animals<=3){
+    RainForest++
+    animals+=2;
+
+}
+console.log(animals)*/
+/*let RainForest =["amazon","Barneo","Cerrado","Congo"]
+RainForest.splice(0,2)
+console.log(RainForest)*/
+/*const foo ={
+    bar(){
+        console.log("hello,World")
+    },
+    name:"Albert",
+    age:26,
+}
+bar()*/
+/*
+document.querySelectorAll("div").forEach(e=>{
+    e.onclick=e=>console.log(e.currentTarget.id)
+})*/
+/*const a={x:1};
+const b={x:1};
+console.log(a.x===b.x)
+console.log(a===b)
+console.log(a[x]===b[x])
+console.log(a!=b)*/
+/*let animals=["eagle","osprey","salmon"]
+let key = animal=>animal==="salomon"
+if(animals.some(key).length===1){
+    console.log(swim)
+}*/
