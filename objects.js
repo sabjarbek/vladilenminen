@@ -53,7 +53,7 @@ Object.keys(person).forEach((key)=>{
 */
 //Context
 //person.info()
-const logger={
+/*const logger={
 
     keys(){
         console.log('Object Keys: ', Object.keys(this))
@@ -63,7 +63,7 @@ const logger={
             console.log(`"${key}": ${this[key]}`)
         })
     }*/
-    keyAndValue(){
+ /*   keyAndValue(){
         Object.keys(this).forEach(function(key) {
             console.log(`"${key}": ${this[key]}`)
         }.bind(this))
@@ -82,7 +82,7 @@ const logger={
             console.log('----------end----------')
         }
     }
-}
+}*/
 //logger.key(person)
 //const bound =logger.key.bind(person)
 //bound()
