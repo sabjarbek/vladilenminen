@@ -100,16 +100,62 @@ if(age>=14 && age<=90){
 else{
     console.log("fuck up")
 }*/
-let age=5
-/*if(age<14||age>90){
+/*let age=5
+if(age<14||age>90){
     console.log("Code is working")
 }
 else{
     console.log("fuck up")
-}*/
+}
 if(!(age>14&&age<90)){
     console.log("Code is working")
 }
 else{
     console.log("fuck up")
 }
+let admin, password;
+admin=prompt("enter username")
+password=prompt("enter password")
+if(admin=="Админ"){
+alert("enter password")
+}
+else if(admin!="Админ"){
+alert("name is wrong ")
+}
+else{
+    alert("cancel")
+}
+if(admin=="Админ"&&password=="Я главный"){
+alert("Здравствуйте")
+}
+else if(password!="Я главный"){
+alert("password is wrong")
+}
+else{
+alert("cancel")
+}*/
+/*#######################*/
+/*#######################*/
+/*###### Important Code ########*/
+/*#######################*/
+/*#######################*/
+/*
+let Username = prompt("Who it is", "");
+if(Username==='Admin'){
+    let pass = prompt('Enter pass','');
+    if (pass==="Я главный"){
+        alert("hello")
+    }
+    else if(pass===''||pass===null){
+        alert("cancel")
+    }
+    else(
+        alert("pass is wrong")
+    )
+}
+else if (Username===''||Username===null){
+alert("cancel")
+}
+else{
+    alert("i don't know")
+}*/
