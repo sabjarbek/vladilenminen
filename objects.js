@@ -1,4 +1,4 @@
-const person ={
+/*const person ={
 name:'Sanjar',
 age:undefined,
 isProgrammer: true,
@@ -8,14 +8,14 @@ lang:['ru','en','de'],
 greet(){
     console.log('greet from person')
 },
-/*info(){
+info(){
     console.log('My name is', person.name)
-}*/
+}
 info(){
     console.log('My name is', this.name)
 }
 }
-
+*/
 //console.log(person.name)
 //console.log(person['age'])
 //const ageKey='age'
@@ -139,4 +139,70 @@ console.log(a!=b)*/
 let key = animal=>animal==="salomon"
 if(animals.some(key).length===1){
     console.log(swim)
-}*/
+}
+//litera and his characters
+let user = {
+    name: "John",
+    age: 30,
+    isAdmin: true,
+    "likes birds": true
+};
+alert(user.age);
+alert(user.name);
+// in object constanta may to change
+
+const user = {
+  name: "John",
+};
+user.name = "Pete"; //
+alert(user.name)
+
+// Square brackets
+let user = {};
+
+// assigning a value to a property
+user["likes birds"] = true;
+
+// get property value
+alert(user["likes birds"]);
+
+// delete property
+delete user["likes birds"];
+
+let user = {
+    name: "John",
+    age: 30
+};
+
+let key = prompt("what is your name", "name");
+
+alert( user[key] );
+
+let fruit = prompt("which fruit are you buying", "apple");
+
+let bag = {
+    [fruit]: 5,
+};
+ alert( bag.apple );
+
+let fruit = 'apple';
+let bag = {
+    [fruit + 'computers']: 5
+};
+
+alert( bag.applecomputers);
+
+function makeUser(name, age) {
+    return {
+        name: name,
+        age: age
+    };
+}
+let user = makeUser( "John", 30);
+alert(user.name);
+
+//Property Existence Check, "in" Operator
+ let user = {name: "John", age: 30}
+
+ alert( "age" in user );
+  */
