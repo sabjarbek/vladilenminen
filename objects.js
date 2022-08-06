@@ -205,4 +205,47 @@ alert(user.name);
  let user = {name: "John", age: 30}
 
  alert( "age" in user );
-  */
+
+ let user = { age: 30 };
+ let key =  "age";
+ alert( key in user ); // // true, имя свойства было взято из переменной key
+
+  let obj = {
+    test: undefined
+  };
+  alert( obj.test ); //  выведет undefined, значит свойство не существует?
+  alert( "test" in obj ); // true, свойство существует!
+   
+let user = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+};
+
+for (let key in user){
+    alert( key)
+    alert( user[key])
+}
+/// как число
+ let codes = {
+    "49": "Germany",
+    "41": "Swiss",
+    "44": "Uk",
+    "1": "USA"
+ };
+ for(let code in codes){
+    alert(code);
+ }
+//как строка
+ let codes = {
+    "+49": "Германия",
+    "+41": "Швейцария",
+    "+44": "Великобритания",
+    // ..,
+    "+1": "США"
+  };
+  
+  for (let code in codes) {
+    alert( +code ); // 49, 41, 44, 1
+  }
+     */
