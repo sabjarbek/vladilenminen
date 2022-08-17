@@ -248,4 +248,257 @@ for (let key in user){
   for (let code in codes) {
     alert( +code ); // 49, 41, 44, 1
   }
-     */
+
+ //task1 
+ let user = {
+    name: "John",
+    surname: "Smith",    
+ };
+ alert(user.name);   
+ user.name = "Pete";
+ alert(user.name);
+ delete user.name;
+ alert(user.name);
+
+let schedule = {};
+
+alert( isEmpty(schedule) );
+
+schedule["8:30"]= "get up";
+alert( isEmpty(schedule) );
+function isEmpty(obj){
+    for(let key in obj){
+        return false
+    }
+ return false
+}    
+const user = {
+    name: "John"
+};
+user.name="Pete"; 
+ 
+ // task 2
+ let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+ };
+ let sum = 0;
+ for( let key in salaries){
+    sum = sum + salaries[key]; 
+    
+    };
+alert(sum)
+   
+ // task 3
+ let menu = {
+width: 200,
+height: 300,
+title: "my menu"
+
+ }
+ function multiplyNumeric(obj){
+    for( let key in obj){
+        if(typeof obj[key]== 'number'){
+            obj[key]*=2  
+            alert(obj[key])           
+        }      
+    }
+ }
+ multiplyNumeric(menu)
+ 
+ // Копирование объектов 
+ let user = { name:'john'};
+ let admin = user;
+ admin.name = 'tom'
+
+ alert( user.name );
+ let user = {
+    name: "Ivan",
+    age: 30
+ };
+
+ let clone = {}; //new empty object
+
+ // we copy property from object  user
+
+ for ( let key in user ){
+    clone[key] = user[key]
+ }
+ clone.name = "Paul";
+
+ alert( user.name )
+ alert( clone.name )
+ 
+ alert( user.age )
+ alert( clone.age )
+
+let user = { name: "Ivan" };
+
+let permissions1 = {canView: true};
+let permissions2 = {canEdit: true};
+
+Object.assign(user, permissions1, permissions2);
+
+let user = { name: "Ivan" };
+
+Object.assign( user, { name:"Paul" });
+
+alert(user.name);
+
+let user = {
+    name: "ivan",
+    age: 30
+};
+
+let clone = Object.assign({}, user);
+ alert(clone.name)
+
+let user = {
+    name: "Ivan",
+    sizes: {
+        height: 182,
+        width: 50
+    }
+}
+alert( user.sizes.height ) 
+
+let user = {
+    name: "Ivan",
+    sizes: {
+        height: 182,
+        width: 50
+    }
+};
+let clone = Object.assign({}, user);
+
+alert( user.sizes === clone.sizes);
+
+user.sizes.width++;
+alert(clone.sizes.width)*/
+/*
+let user = {
+    name: "John",
+    age: 30
+};*/
+//user.sayHi = function(){
+//    alert("hi!")
+//};
+
+//user.sayHi();
+/*user ={
+    sayHi: function(){
+        alert("Hi!");
+    }
+};
+
+user.sayHi()
+//Сокращённая запись метода
+user = {
+    sayHi(){
+        alert("Hi");
+    }
+};
+sayHi();
+let user = {
+    name: "John",
+    age: 30,
+
+    sayHi(){
+        console.log(this.age)
+    }
+};
+user.sayHi()
+
+let user = {
+    name: "John",
+    age: 30,
+    
+    sauHi(){
+        alert( user.name);
+    }
+};
+
+let admin = user;
+
+user = null;
+
+admin.sayHi();
+
+let user = { name: "John" };
+let admin = { name: "Admin"};
+
+function sayHi(){
+    alert( this.name);
+}
+user.f = sayHi;
+admin.f = sayHi;
+user.f();
+
+//Внутренняя реализация: Ссылочный тип
+
+let user = {
+    name: "John",
+    hi() { alert(this.name); },
+    bye() { alert("Bye"); }
+};
+
+user.bye()
+admin.f();
+
+let user = {
+    name: "John",
+    hi() { alert(this.name); }
+};
+let hi = user.hi;
+hi();
+
+//У стрелочных функций нет «this»
+let user = {
+    fitrstName: "Ilya",
+    sayHi(){
+        let arrow = () => alert( this.fitrstName);
+        arrow();
+    }
+};
+
+user.sayHi();
+
+let user = {
+    name: "John",
+    go: function() { alert(this.name)}
+};
+user.go()
+
+// вызов метода
+function makeUser() {   
+    return {
+        name: "John",
+        ref(){
+            return this;
+        }
+
+    };
+};
+
+ let user = makeUser();
+ alert (user.ref().name)
+
+// the task is to create calculator
+let calculator ={
+   
+    sum(){ 
+        return this.a+this.b 
+    },
+    mul(){
+        return this.a*this.b
+     },
+    read() {
+        this.a=+prompt("a?",0);
+        this.b= +prompt("b?",0)
+    },
+};
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+ */
