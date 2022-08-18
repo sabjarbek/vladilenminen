@@ -501,4 +501,59 @@ let calculator ={
 calculator.read();
 alert( calculator.sum() );
 alert( calculator.mul() );
- */
+
+// Функция- конструктор
+function User (name){
+    this.name = name;
+    this.isAdmin = false;
+}
+let user = new User("John");
+
+alert(user.name);
+alert(user.isAdmin);
+//Проверка на вызов в режиме конструктора: new.target
+
+ function User() {
+    alert(new.target);
+ }
+ User(); // undefined
+ new User(); // function User{}
+  
+function User(name){
+    if(!new.target){
+        return new User(name)
+    }
+    this.name = name;
+}
+let john = User("John");
+
+alert(vasya.name)
+
+//Возврат значения из конструктора return
+
+function BigUser(){
+    this.name = "Ivan";
+
+    return { name: "Godzilla"}
+
+}
+alert( new BigUser().name)
+function SmallUser() {
+    
+    this.name = "Ivan";
+    return;
+}
+alert( new SmallUser().name );
+
+//Создание методов в конструкторе
+function User(name) {
+    this.name = name;
+
+    this.sayHi = function() {
+        alert( "My name is " + this.name);
+    };
+    }
+let vasya = new User("Vasya");
+
+vasya.sayHi()
+*/
