@@ -598,4 +598,51 @@ accumulator.read();
 accumulator.read();
 
 alert(accumulator.value);
+
+// Опциональная цепочка '?.'
+
+let user = {};
+
+alert(user,adsress ? user.address.street : undefined);
+
+let html  = document.querySelector('.elem') ? document.querySelector('.elem').innerHTML : null
+
+//Опциональная цепочка 
+
+let user = {};
+
+alert( user?.address?.street )
+
+let html = document.querySelector('.elem')?.innerHTML
+
+let user = null;
+
+alert( user?.address )
+
+alert( user?.address.street )
+
+let userAdmin = {
+    admin() {
+        alert("i am  john")
+    }
+};
+
+userAdmin.admin?.();
+
+userGuest.admin?.(); 
 */
+let key = "firstName";
+
+let user1 = {
+    firstName: "John"
+};
+
+let user2 = null
+
+alert( user1?.[key] ); 
+alert( user2?.[key] );
+
+
+
+
+
