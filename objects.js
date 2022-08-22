@@ -630,7 +630,7 @@ let userAdmin = {
 userAdmin.admin?.();
 
 userGuest.admin?.(); 
-*/
+
 let key = "firstName";
 
 let user1 = {
@@ -642,7 +642,31 @@ let user2 = null
 alert( user1?.[key] ); 
 alert( user2?.[key] );
 
+// data type Symbol
 
+let id = Symbol("id");
 
+//alert(id); // не работает
 
+alert(id.toString());// теперь работает
+alert(id.description)// id
 
+let user = {
+    name: "John"
+};
+let id = Symbol("id");
+
+user[id] = 1;
+
+alert( user[id] );
+*/
+let id = Symbol("id");
+
+let user = {
+    name:"John",
+    [id]: 123
+};
+alert( "Напрямую: " + user[id] )
+ let clone = Object.assign({}, user);
+
+ alert( clone[id]); 
