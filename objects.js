@@ -659,7 +659,7 @@ let id = Symbol("id");
 user[id] = 1;
 
 alert( user[id] );
-*/
+
 let id = Symbol("id");
 
 let user = {
@@ -670,3 +670,20 @@ alert( "Напрямую: " + user[id] )
  let clone = Object.assign({}, user);
 
  alert( clone[id]); 
+
+let id = Symbol.for("id");
+
+let idAgain = Symbol.for("id");
+alert( id === idAgain ) 
+let sym = Symbol.for("name");
+let sym2 = Symbol.for("id");
+
+alert( Symbol.keyFor(sym) );
+alert( symbol.keyFor(sym2) );
+*/
+let globalSymbol = Symbol.for("name")
+let localSymbol = Symbol("name")
+alert( Symbol.keyFor(globalSymbol) ); //name, глобальный символ
+alert( Symbol.keyFor(localSymbol) ); // undefined для неглобального символа
+
+alert( localSymbol.description);
