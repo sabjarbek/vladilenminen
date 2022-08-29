@@ -680,10 +680,73 @@ let sym2 = Symbol.for("id");
 
 alert( Symbol.keyFor(sym) );
 alert( symbol.keyFor(sym2) );
-*/
+
 let globalSymbol = Symbol.for("name")
 let localSymbol = Symbol("name")
 alert( Symbol.keyFor(globalSymbol) ); //name, глобальный символ
 alert( Symbol.keyFor(localSymbol) ); // undefined для неглобального символа
 
 alert( localSymbol.description);
+*/
+/* преобразование объекта в примитив 
+let num = Number(obj); //явное преобразование
+
+let n = +obj; // математическое преобразование
+let delta = date1 - date2
+//сравнения больше/меньше
+let greater = user1 > user2
+
+let user = {
+    name: "John",
+    money: 1000,
+
+    [Symbol.toPrimitive](hint){
+        alert(`hint: ${hint}`);
+        return hint == "string" ? `{name: "${this.name}"}`: this.money
+    }
+}
+alert(user);
+alert(+user);
+alert(user +500)
+
+let user = {name:"John"};
+
+alert(user.valueOf() === user)
+ 
+let user = {
+    name: "John",
+    money: 1000,
+
+    toString(){
+        return `{name: "${this.name}"}`
+    },
+    valueOf(){
+        return this.money;
+    } 
+}
+alert(user)
+alert(+user)
+alert(user+500)
+
+let user = {
+    name: "John",
+
+    toString(){
+        return this.name;
+    }
+}
+
+let obj = {
+    toString(){
+        return "2";
+    }
+}
+alert(obj * 2)
+
+let obj = {
+    toString(){
+        return "2";
+    }
+}
+alert(obj + 2)
+*/
