@@ -749,4 +749,25 @@ let obj = {
     }
 }
 alert(obj + 2)
+
+let roma = {
+    name: "john",
+    sayHi: function(){
+        alert("hi, buddy");
+    }
+};
+roma.sayHi();
+
+let str = "hi";
+alert( str.toUpperCase() )
+
+let num = 1.23456;
+
+alert( num.toFixed(2) );
+
 */
+let str = "Hi";
+
+str.test = 5;
+
+alert(str.test)
